@@ -1,0 +1,1 @@
+This is a collection of different front-end web features that I have found and recreated in react. As of right now, there are no plans to host this on any domain, so in order to preview them you must clone this repository and run npm install and npm start in the directory.`
