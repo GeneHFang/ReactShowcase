@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { colKey } from '../redux/reducers/column';
-import Card from './Card';
+import Card from '../components/Card';
 import { addToColumn, removeFromColumn } from '../redux/actions/column';
 
 const msp = (state) => {
@@ -15,15 +15,17 @@ const mdp = {
     removeFromColumn
 };
 
-
+//Container for Card Components 
 const Column = (props) => {
-
+    //Controlled form (only text input for now)
     const [cardInfo, setCardInfo] = useState("");
 
+    //Call dispatch to add card
     const addCard = (columnNum) => {
         props.addToColumn(cardInfo, columnNum);
     }
 
+    //Renders all Cards present in state. Passes remove function from dispatch as a prop
     const renderCards = () => {
         return props.threeCol[colKey[props.num]].map((card,index)=>{
             return <Card info={card.info} col={props.num} remove={props.removeFromColumn} index={index}/>

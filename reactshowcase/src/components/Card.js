@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+//Card component that is added to each column individually
 const Card = (props) => {
     return(
         <div>
