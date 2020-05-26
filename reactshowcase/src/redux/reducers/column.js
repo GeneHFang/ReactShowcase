@@ -6,7 +6,7 @@ const defaultState = {
 }
 
 //keys for columns
-const colKey = {
+export const colKey = {
     1:"firstCol",
     2:"secondCol",
     3:"thirdCol",
