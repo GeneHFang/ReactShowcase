@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { colKey } from '../redux/reducers/column';
+import {  }
 
 const msp = (state) => {
     return({
@@ -10,6 +11,11 @@ const msp = (state) => {
 
 
 const Column = (props) => {
+
+    const addCard = () => {
+        let cardObj = {};
+    }
+
     return(
         <div>
             Column {props.num}
