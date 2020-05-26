@@ -17,10 +17,11 @@ const colReducer = (prevState = defaultState, action) => {
     switch(action.type){
         
         case "ADD_TO_COL":
-            return {...prevState, [colKey[action.key]]:action.payload};
+            let copy = [...prevState[colKey[action.key]], action.payload];
+            return {...prevState, [colKey[action.key]]:copy};
         
         case "REMOVE_FROM_COL":
-            let tempRemove = [...prevState[action.key]];
+            let tempRemove = [...prevState[colKey[action.key]]];
             tempRemove.splice(action.index,1);
             return {...prevState, [colKey[action.key]]:tempRemove};
 

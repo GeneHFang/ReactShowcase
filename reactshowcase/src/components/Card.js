@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const Card = () => {
+const Card = (props) => {
     return(
         <div>
-            Card info
-            <button>Remove Card</button>
+            {props.info}
+            <button onClick={()=>props.remove(props.col,props.index)}>Remove Card</button>
         </div>
     );
 };
