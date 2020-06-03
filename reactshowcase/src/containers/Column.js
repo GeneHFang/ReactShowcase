@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { colKey } from '../redux/reducers/column';
 import Card from '../components/Card';
-import { addToColumn, removeFromColumn } from '../redux/actions/column';
+import { addToColumn, removeFromColumn, changeColumn } from '../redux/actions/column';
 
 const msp = (state) => {
     return({
@@ -12,7 +12,8 @@ const msp = (state) => {
 
 const mdp = {
     addToColumn,
-    removeFromColumn
+    removeFromColumn,
+    changeColumn
 };
 
 //Container for Card Components 
@@ -22,13 +23,14 @@ const Column = (props) => {
 
     //Call dispatch to add card
     const addCard = (columnNum) => {
+        setCardInfo("");
         props.addToColumn(cardInfo, columnNum);
     }
 
-    //Renders all Cards present in state. Passes remove function from dispatch as a prop
+    //Renders all Cards present in state. Passes remove and change functions from dispatch as a prop
     const renderCards = () => {
         return props.threeCol[colKey[props.num]].map((card,index)=>{
-            return <Card info={card.info} col={props.num} remove={props.removeFromColumn} index={index}/>
+            return <Card info={card.info} col={props.num} remove={props.removeFromColumn} index={index} change={props.changeColumn}/>
         });
     }
 

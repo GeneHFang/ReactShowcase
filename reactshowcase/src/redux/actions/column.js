@@ -24,3 +24,18 @@ export const removeFromColumn = (colNum, index) => {
     }
 };
 
+/**
+ * 
+ * @param {Number} from - Column number from which component is being removed from
+ * @param {Number} to - Column number from which component is being moved to
+ * @param {Number} fromIndex - Current index position of card being moved
+ */
+export const changeColumn = (from, to, fromIndex) => {
+    console.log("test")
+    return {
+        type:"CHANGE_COL",
+        removeKey: from,
+        addKey: to,
+        index:fromIndex
+    }
+}
