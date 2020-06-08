@@ -30,7 +30,8 @@ const colReducer = (prevState = defaultState, action) => {
             let tempChange = [...prevState[colKey[action.removeKey]]];
             let temp = tempChange.splice(action.index,1);
             let newCol = [...prevState[colKey[action.addKey]]];
-            newCol.push(temp);
+            newCol.push(temp[0]);
+            console.log(temp[0]);
             return {...prevState,[colKey[action.removeKey]]:tempChange, [colKey[action.addKey]]:newCol};
 
         //by default return the same state
