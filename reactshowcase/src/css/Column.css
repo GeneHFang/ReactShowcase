@@ -1,0 +1,9 @@
+.column {
+    background-color: rgba(70,70,70,1);
+    border-radius: 5%;
+    color: whitesmoke;
+    padding:25px;
+    margin-left: 5%;
+    margin-right: 5%;
+    position: relative;
+}

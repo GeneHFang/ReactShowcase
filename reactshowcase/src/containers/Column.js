@@ -4,6 +4,8 @@ import { colKey } from '../redux/reducers/column';
 import Card from '../components/Card';
 import { addToColumn, removeFromColumn, changeColumn } from '../redux/actions/column';
 
+import '../css/Column.css';
+
 const msp = (state) => {
     return({
         threeCol: state.colReducer,
@@ -35,8 +37,10 @@ const Column = (props) => {
     }
 
     return(
-        <div>
-            Column {props.num}
+        <div className="column">
+            <h1>
+                Column {props.num}
+            </h1>
             {renderCards()}
             <input type="text" value={cardInfo} onChange={(e)=>setCardInfo(e.target.value)}/>
             <button onClick={()=>addCard(props.num)}>Add Card</button>
