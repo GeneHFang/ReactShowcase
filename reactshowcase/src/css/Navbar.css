@@ -1,0 +1,6 @@
+.NavBar {
+    padding-left: 20px;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}

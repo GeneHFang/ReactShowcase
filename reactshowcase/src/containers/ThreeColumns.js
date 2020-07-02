@@ -17,9 +17,9 @@ const ThreeColumns = () => {
     };
 
     return(
-        <Fragment>
+        <div className="App">
             {renderCols(3)}
-        </Fragment>
+        </div>
     )
 };
 
