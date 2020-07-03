@@ -6,9 +6,14 @@ import '../css/Navbar.css';
 const Navbar = () => {
     return(
         <div className="NavBar">
-            <NavLink to="3Col" exact>
+            <NavLink to="/3Col" exact>
                 <button>
                     3 Columns
+                </button>
+            </NavLink>
+            <NavLink to="/inf-scroll" exact>
+                <button>
+                    Infinite Scroll
                 </button>
             </NavLink>
             <NavLink to="/" exact>

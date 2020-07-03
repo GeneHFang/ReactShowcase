@@ -4,6 +4,7 @@ import './App.css';
 import ThreeColumns from './containers/ThreeColumns';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Navbar from './router/Navbar';
+import InfiniteScroll from './containers/InfiniteScroll';
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Router>
         <Navbar/>
         <Route path="/3Col" component={ThreeColumns} />
+        <Route path="/inf-scroll" component={InfiniteScroll} />
       </Router>
   );
 }
