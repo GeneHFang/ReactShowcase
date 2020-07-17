@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-const PokemonImages = () => {
+const PokemonImages = (props) => {
     return(
-        <div>
-            Pokemon go here
-        </div>
+        <Fragment>
+            {props.pokes.map((name,index) => {
+                if (props.pokes.length===index+1){
+                    return <div ref={props.refcallback} key={name}>{name}</div>
+                }
+                else{
+                    return <div key={name}>{name}</div>
+                }
+            })}
+        </Fragment>
+
     );
 };
 
