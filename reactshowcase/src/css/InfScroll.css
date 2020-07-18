@@ -2,3 +2,8 @@
     display: flex;
     justify-content: center;
 }
+
+.Pokemon {
+    margin-left: 45%;
+    color: whitesmoke;
+}

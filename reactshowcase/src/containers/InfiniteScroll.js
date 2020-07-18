@@ -31,9 +31,9 @@ const InfiniteScroll = () => {
     return (
         <Fragment>
             <p className="InfScroll">
-             <input type="text" onChange={(e)=>setPage(e.target.value)} placeholder="Type anything here" ></input>
+                <input hidden type="text" onChange={(e)=>setPage(e.target.value)} placeholder="Type anything here" ></input>
             </p>
-            <PokemonImages pokes={pokes} refcallback={lastPokemonElementRef}/>
+                <PokemonImages pokes={pokes} refcallback={lastPokemonElementRef}/>
             <div>{loading && 'Loading...'}</div>
             <div>{error && 'Error'}</div>
         </Fragment>
